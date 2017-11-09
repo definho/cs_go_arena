@@ -1,0 +1,541 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 0px;
+    color: black;
+    background-image: url(images/backgroundTexture.jpg);
+    background-repeat: repeat;
+    font-family: 'open sans',arial,sans-serif;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+.headerUp { /* script za dizanje */
+  position: fixed;
+  top: -42px;
+}
+
+.top {
+  background-color: rgb(150, 150, 150);
+  position: absolute;
+  width: inherit;
+  height: 40px;
+  border-bottom: 1px solid rgb(74, 74, 74);
+  font-weight: 100;
+  color: rgb(40, 40, 40);
+  text-align: right;
+  line-height: 100%;
+  transition: all 0.3s ease;
+}
+
+.top:hover {
+  height: 70px;
+  z-index: 3;
+}
+
+.top:hover #comercial {
+  height: 65px;
+}
+
+#comercial {
+  position: absolute;
+  left: 10px;
+  width: 70%;
+  height: 40px;
+}
+
+
+#topText {
+  position: absolute;
+  right: 50px;
+  height: 100%;
+}
+
+
+#steelseries {
+  float: left;
+  height: 100%;
+}
+
+#monster {
+ float: left;
+  height: 100%;
+}
+
+#eizo {
+  float: left;
+  height: 100%;
+}
+
+#roccat {
+  float: left;
+  height: 100%;
+}
+
+#razer {
+  float: left;
+  height: 100%;
+}
+
+
+
+
+.nav {
+  position: absolute;
+  background-image: url("images/fullHeader.jpg");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-color: black;
+  position: absolute;
+  width: inherit;
+  height: 79px;
+  top: 41px;
+  border-bottom: 1px solid rgb(74, 74, 74);
+}
+
+#csgoHeader {
+  position: absolute;
+  top: 1px;
+  left: 40px;
+}
+
+.tabs {
+  position: absolute;
+  width: 100%;
+  height: 39px;
+  top: 121px;
+  left: 0px;
+  border-bottom: 1px solid rgb(74, 74, 74);
+  background-color: rgb(30, 30, 30);
+}
+
+.tabs ul {
+  list-style-type: none;
+  position: absolute;
+  right: 80px;
+  
+}
+
+.tabs li {
+  float: right;
+  height: 39px;
+}
+
+.tabs li a {
+  display: block;
+  width: 80px;
+  height: 39px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 39px; 
+ 
+}
+
+.tabs li a.selected {
+  background-color: rgb(60, 60, 60);
+}
+
+.tabs li a.selectedAdmin {
+  background-color: rgb(227, 43, 70);
+}
+
+
+.tabs li a:hover {
+  background-color: rgb(60, 60, 60);
+}
+
+.content { 
+  position: relative;
+  height: 3000px;
+  margin-top: 60px;
+  
+}
+
+/* script za dizanje */
+.contentUp { 
+  margin-top: 230px;
+}
+  
+.button {
+  
+  background-color: rgb(40,40,40);
+  border: 1px solid rgb(74,74,74);
+  border-radius: 10px;
+  padding: 4px;
+  
+  cursor: pointer;
+  display: inline-block;
+  
+  font-size: 14px;
+  color: #fff;
+  text-transform: none;
+  
+  transition: all 100ms ease-in-out;
+  
+  width: auto;
+  height: 30px;
+}
+
+.joinButton {
+  position: absolute;
+  background-color: rgba(40,40,40,0.8);
+  border: 1px solid rgb(74,74,74);
+  border-radius: 10px;
+  padding: 4px;
+  
+  cursor: pointer;
+  display: inline-block;
+  
+  font-size: 14px;
+  color: #fff;
+  text-transform: none;
+  
+  transition: all 100ms ease-in-out;
+  
+  width: auto;
+  height: 30px;
+  right: 3%;
+  top: 3px;
+}
+
+.button:hover {
+  opacity: .7;
+}
+
+#logo {
+  position: absolute;
+  right: 90px;
+  top: 10px;
+}
+
+#logoutButton {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+#loginButton {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/* nakon komentara je dio vezan za thumnail checkboxeve*/
+.thumb{
+    width:14%;
+    display: inline-block;
+    margin: 1px;
+    
+}
+
+
+input.chk{
+
+}
+
+/*css za dijelove contenta box1 box2*/
+/*box1*/
+.box1 {
+  position: absolute;
+  top: 50px;
+  left: 2%;
+  height: 80%;
+  width: 70%;
+  border: 1px solid red;
+  box-shadow: 3px -1px 2px rgb(10, 10, 10);
+  
+  color: white;
+}
+
+.welcomeMessage {
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  height: auto;
+  width: 90%;
+  border: 1px solid rgb(74, 74, 74);
+  background-color: rgb(60, 60, 60);
+}
+
+.userStats {
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  height: 5%;
+  width: 90%;
+  border: 1px solid rgb(74, 74, 74);
+  background-color: rgb(60, 60, 60);
+}
+table, th, td {
+    border: 1px solid rgb(74, 74, 74);
+    border-collapse: collapse;
+}
+
+table {
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  
+}
+
+/*lobby*/
+.lobby {
+  position: absolute;
+  top: 9%;
+  left: 5%;
+  height: 60%;
+  width: 90%;
+  border: 1px solid rgb(74, 74, 74);
+  background-color: rgb(60, 60, 60);
+}
+
+#phpCreateLobby {
+  position: relative;
+  width: 40%;
+  left: 30%;
+}
+
+#createButton {
+  position: relative;
+  width: 40%;
+  left: 30%;
+  top: 3px;
+ 
+
+}
+
+/*box2*/
+.box2 {
+  color: white;
+  position: absolute;
+  top: 50px;
+  left: 77%;
+  height: 80%;
+  width: 21%;
+  border: 1px solid red;
+  box-shadow: 3px -1px 2px rgb(10, 10, 10);
+}
+
+.lobbyDropdown {
+  display: none;
+}
+
+#joinDropdown {
+ display: none;
+}
+
+.joinlobbyThumbnail {
+  position: relative;
+  border: 1px solid rgb(60, 60, 60);
+  margin: 2px;
+  height: 2%;
+  background-color: rgb(40, 40, 40);
+}
+
+#joinlobbyAvatar{
+  left: 1%;
+  position: absolute;
+  top: 3px;
+}
+
+#joinlobbyText{
+
+  color: white;
+}
+
+#lobbyworth {
+  position: absolute;
+  left: 20%;
+  top: 1px;
+  width: 80%;
+  height: 90%;
+
+}
+
+.thumbL {
+    width:5%;
+    display: inline-block;
+    margin: 1px;
+
+}
+
+#USER1 {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 49%;
+  height: 15%;
+  
+  background-color: rgb(240, 238, 93);
+  box-shadow: 3px -1px 2px rgb(10, 10, 10);
+}
+
+#USER2 {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 49%;
+  height: 15%;
+  
+  background-color: rgb(40,40,40);
+  box-shadow: 3px -1px 2px rgb(10, 10, 10);
+}
+
+#user1avatar {
+
+  position: absolute;
+  top: 2%;
+  left: 2%;
+ 
+}
+
+#user2avatar {
+  
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  
+}
+
+#user1nick {
+  position: absolute;
+  color: rgb(40,40,40);
+  right: 5%;
+  top: 2%;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+#user2nick {
+  position: absolute;
+  color: rgb(240, 238, 93);
+  left: 5%;
+  top: 2%;
+   font-weight: 900;
+  font-size: 25px;
+}
+
+#user1res {
+  position: absolute;
+  color: rgb(40,40,40);
+  right: 5%;
+  top: 20%;
+  
+   font-weight: 900;
+  font-size: 60px;
+}
+
+#user2res {
+  position: absolute;
+  color: rgb(240, 238, 93);
+  left: 5%;
+  top: 20%;
+  
+  font-weight: 900;
+  font-size: 60px;
+}
+
+#USER12 {
+  position: absolute;
+  left: 2px;
+  top: 16%;
+  width: 99%;
+  height: 8%;
+  
+  background-color: rgb(40,40,40);
+  box-shadow: 3px -1px 2px rgb(10, 10, 10);
+}
+
+#award {
+  position: absolute;
+  left: 2px;
+  top: 25%;
+  width: 99%;
+  height: 70%;
+ 
+  background-color: rgb(40,40,40);
+  box-shadow: 3px -1px 2px rgb(10, 10, 10);
+}
+
+#resultApply {
+  position: absolute;
+  left: 24.5%;
+}
+
+.inventory {
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.inventory .thumb{
+  width: 30%;
+
+}
+
+#avatarE {
+  position: absolute;
+  right: 5%;
+  TOP: 1%;
+  height: 7%;
+  
+}
+
+#nickE {
+  position: absolute;
+  left: 5%;
+  TOP: 1%;
+   font-weight: 900;
+  font-size: 60px;
+  
+}
+
+#profilesubmit {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.textbox { 
+    height: 25px; 
+    width: auto;
+    color: white;
+    background-color: transparent;  
+    border-style: solid;  
+    border-width: 0px 0px 1px 0px;  
+    border-color: red; 
+    outline:0;
+     font-weight: 900;
+  font-size: 15px;
+}
+
+#welcomeMessage {
+  color: white;
+  position: absolute;
+  top: 100px;
+  left: 30%;
+  border: solid 1px rgb(80,80,80);
+  background-color: rgb(40,40,40);
+  
+}
+
+

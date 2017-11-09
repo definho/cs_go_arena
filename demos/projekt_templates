@@ -1,0 +1,76 @@
+*CITANJE IZ BAZE
+
+$query = mysqli_query($conn, "SELECT * FROM User WHERE UserID='".$steamid."'");
+$num_rows=mysqli_num_rows($query);
+
+
+
+*UPISIVANJE U BAZU
+
+if (!$num_rows) {
+		
+		$stmt = mysqli_prepare($conn, "INSERT INTO User (UserID,LobbyFlag) VALUES ($steamid, 0)");
+		if ($stmt === false) {
+				trigger_error('Statement failed! ' . htmlspecialchars(mysqli_error($conn)), E_USER_ERROR);
+		}
+		$exec = mysqli_stmt_execute($stmt);
+		if ($exec === false) {
+				trigger_error('Statement execute failed! ' . htmlspecialchars(mysqli_stmt_error($stmt)), E_USER_ERROR);	
+			}
+		echo "UPISANO";
+	}
+    
+*PRITANJE ARRAYA
+
+function print_array($aArray) {
+// Print a nicely formatted array representation:
+  echo '<pre>';
+  print_r($aArray);
+  echo '</pre>';
+}
+
+*INVENTORY GET
+
+$steamid = $content['response']['players'][0]['steamid'];
+	 $api= "http://steamcommunity.com/profiles/$steamid/inventory/json/730/2";
+	 $json=file_get_contents($api);
+	 $inventory= json_decode($json, true);
+	foreach ($inventory['rgDescriptions'] as $i => $value_i) {
+		
+			if($inventory['rgDescriptions'][$i]['tradable']) {
+				foreach ($inventory['rgInventory'] as $j => $value_j) {
+					if($inventory['rgInventory'][$j]['classid']==$inventory['rgDescriptions'][$i]['classid']) {
+						$count++;
+					}
+				}
+				for ($j = $count; $j > 0; $j--) {
+					echo '<img src="http://cdn.steamcommunity.com/economy/image/'.$inventory['rgDescriptions'][$i]['icon_url'].'" alt="Smiley face" height="60" widht="60" >';
+					
+					
+					}
+				
+			}
+			unset($count);
+			
+	}
+
+*IMG TO THUMBNAILCHECKBOX
+
+<div class="thumb">
+		<img class="img" src="http://cdn.steamcommunity.com/economy/image/'.$inventory['rgDescriptions'][$i]['icon_url'].'" alt="Smiley face" height="60" widht="60"/>
+		<input type="checkbox" class="chk " checked="checked" id="img1" name="img1" value="0" />
+</div>
+
+.thumb{
+    width:160px;
+    float: left;
+    margin-left: 5px;
+    border: solid 1px #ccc; 
+}
+.img {
+
+}
+
+input.chk{
+margin-left: 70px;
+}
